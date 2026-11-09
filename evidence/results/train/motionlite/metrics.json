@@ -1,0 +1,117 @@
+{
+  "architecture": "motionlite",
+  "parameters": 11656,
+  "best_epoch": 12,
+  "validation": {
+    "accuracy": 0.9332669322709163,
+    "macro_f1": 0.904323389978177,
+    "confusion_matrix": [
+      [
+        217,
+        0,
+        0,
+        0,
+        42,
+        0
+      ],
+      [
+        0,
+        257,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        265,
+        0,
+        63,
+        81
+      ],
+      [
+        0,
+        0,
+        0,
+        305,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1595,
+        0
+      ],
+      [
+        0,
+        11,
+        0,
+        0,
+        4,
+        172
+      ]
+    ],
+    "classes": [
+      "squats",
+      "pushups",
+      "lunges",
+      "bicep_curls",
+      "other_exercise",
+      "non_activity"
+    ],
+    "per_class": {
+      "squats": {
+        "precision": 1.0,
+        "recall": 0.8378378378378378,
+        "f1": 0.911764705882353,
+        "support": 259
+      },
+      "pushups": {
+        "precision": 0.9589552238805971,
+        "recall": 1.0,
+        "f1": 0.979047619047619,
+        "support": 257
+      },
+      "lunges": {
+        "precision": 1.0,
+        "recall": 0.6479217603911981,
+        "f1": 0.7863501483679525,
+        "support": 409
+      },
+      "bicep_curls": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 305
+      },
+      "other_exercise": {
+        "precision": 0.9360328638497653,
+        "recall": 1.0,
+        "f1": 0.9669596847529555,
+        "support": 1595
+      },
+      "non_activity": {
+        "precision": 0.6798418972332015,
+        "recall": 0.9197860962566845,
+        "f1": 0.7818181818181817,
+        "support": 187
+      }
+    },
+    "loss": 0.584359560937622
+  },
+  "class_weights": [
+    1.0275530815124512,
+    1.2817281484603882,
+    0.8787292242050171,
+    1.1306747198104858,
+    0.42694395780563354,
+    1.2543708086013794
+  ],
+  "best_checkpoint": "/kaggle/working/motionlite_training/motionlite/best.pt",
+  "test_evaluation": "not_run",
+  "limitations": "One seed; overlapping windows; provisional background labels; session protocol and frame-origin caveats retained."
+}

@@ -1,0 +1,32 @@
+{
+  "protocol_version": "motionlite-fixed-test-v1",
+  "primary_model": "motionlite",
+  "comparison_model": "plain_tcn",
+  "checkpoint_sha256": {
+    "plain_tcn": "4a59186a43a798a45821a41d0e465121fd0e01b4848d24dd7643acd2e89e51d2",
+    "motionlite": "ced77dbe8e92f417d314c2bc724f49ed65806d5975d6c9cdbd0bcfef8b396646"
+  },
+  "selected_epochs": {
+    "plain_tcn": 11,
+    "motionlite": 12
+  },
+  "selection_rule": "best validation macro-F1 from the completed training run",
+  "test_sessions": {
+    "seen_session_test": [
+      "w09",
+      "w10",
+      "w11"
+    ],
+    "unseen_subject_test": [
+      "w00",
+      "w05",
+      "w12",
+      "w13",
+      "w20"
+    ]
+  },
+  "prediction_rule": "argmax of six output logits; no test-tuned rejection threshold",
+  "preprocessing": "saved training mean/std; never refit on test data",
+  "dataset_index_sha256": "675b6516f54d430d96cd9db3dcb0c2f76b2fae5643f6d23c54fa4e15eaca0785",
+  "dataset_config_sha256": "f434ac040581926328ea67f8bc670f40835ec35e08001e30519b7aeb054748a9"
+}

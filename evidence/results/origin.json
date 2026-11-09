@@ -1,0 +1,31 @@
+[
+  {
+    "source_archive": "MotionLite_Training_Results.zip",
+    "sha256": "4c3eade0c8a94e1c307963300c21b84bce9da57718cfc4882f7868b8dbe43d1b",
+    "selected_original_members": [
+      "motionlite_training/dataset_manifest.json",
+      "motionlite_training/results.json",
+      "motionlite_training/training_curves.png",
+      "motionlite_training/validation_confusion.png",
+      "motionlite_training/plain_tcn/history.csv",
+      "motionlite_training/plain_tcn/metrics.json",
+      "motionlite_training/plain_tcn/protocol.json",
+      "motionlite_training/motionlite/history.csv",
+      "motionlite_training/motionlite/metrics.json",
+      "motionlite_training/motionlite/protocol.json"
+    ]
+  },
+  {
+    "source_archive": "MotionLite_Test_Evaluation_Results.zip",
+    "sha256": "63de3651565ce3d8834688fd8cc07096ee24e4e3d2a7826ba7badec3d15c3a58",
+    "selected_original_members": [
+      "motionlite_test_evaluation/data_manifest.json",
+      "motionlite_test_evaluation/frozen_evaluation_plan.json",
+      "motionlite_test_evaluation/per_class.csv",
+      "motionlite_test_evaluation/per_session.csv",
+      "motionlite_test_evaluation/summary.csv",
+      "motionlite_test_evaluation/test_results.json",
+      "motionlite_test_evaluation/plain_tcn_unseen_subject_test_confusion.png"
+    ]
+  }
+]

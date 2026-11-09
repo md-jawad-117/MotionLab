@@ -1,0 +1,75 @@
+{
+  "source_video": "MM-Fit/w09/w09_rgb.mp4",
+  "source_labels": "MM-Fit/w09/w09_labels.csv",
+  "fps": 30.0,
+  "frames": 2370,
+  "edited": true,
+  "role": "qualitative demo from existing MM-Fit evaluation data; not a new independent test",
+  "limits": "Original set counts do not describe these excerpts. No independent reference rep counts are supplied.",
+  "intervals": [
+    {
+      "start_frame": 0,
+      "end_frame_exclusive": 420,
+      "expected_class": "squats",
+      "source_first_frame": 3770,
+      "source_end_frame_exclusive": 4190
+    },
+    {
+      "start_frame": 450,
+      "end_frame_exclusive": 870,
+      "expected_class": "pushups",
+      "source_first_frame": 12858,
+      "source_end_frame_exclusive": 13278
+    },
+    {
+      "start_frame": 900,
+      "end_frame_exclusive": 1320,
+      "expected_class": "lunges",
+      "source_first_frame": 29741,
+      "source_end_frame_exclusive": 30161
+    },
+    {
+      "start_frame": 1350,
+      "end_frame_exclusive": 1770,
+      "expected_class": "bicep_curls",
+      "source_first_frame": 82851,
+      "source_end_frame_exclusive": 83271
+    },
+    {
+      "start_frame": 1800,
+      "end_frame_exclusive": 2100,
+      "expected_class": "other_exercise",
+      "source_first_frame": 41235,
+      "source_end_frame_exclusive": 41535
+    },
+    {
+      "start_frame": 2130,
+      "end_frame_exclusive": 2370,
+      "expected_class": "non_activity",
+      "source_first_frame": 6055,
+      "source_end_frame_exclusive": 6295
+    }
+  ],
+  "gif_preview_intervals_s": [
+    [
+      5,
+      8
+    ],
+    [
+      20,
+      23
+    ],
+    [
+      35,
+      38
+    ]
+  ],
+  "gif_encoding": {
+    "duration_s": 9,
+    "width": 540,
+    "height": 304,
+    "fps": 6,
+    "palette_colours": 64,
+    "processing": "Resized, lightly denoised and colour-quantized for a small animated preview."
+  }
+}

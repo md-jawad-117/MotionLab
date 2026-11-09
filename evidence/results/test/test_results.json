@@ -1,0 +1,481 @@
+{
+  "frozen_plan": {
+    "protocol_version": "motionlite-fixed-test-v1",
+    "primary_model": "motionlite",
+    "comparison_model": "plain_tcn",
+    "checkpoint_sha256": {
+      "plain_tcn": "4a59186a43a798a45821a41d0e465121fd0e01b4848d24dd7643acd2e89e51d2",
+      "motionlite": "ced77dbe8e92f417d314c2bc724f49ed65806d5975d6c9cdbd0bcfef8b396646"
+    },
+    "selected_epochs": {
+      "plain_tcn": 11,
+      "motionlite": 12
+    },
+    "selection_rule": "best validation macro-F1 from the completed training run",
+    "test_sessions": {
+      "seen_session_test": [
+        "w09",
+        "w10",
+        "w11"
+      ],
+      "unseen_subject_test": [
+        "w00",
+        "w05",
+        "w12",
+        "w13",
+        "w20"
+      ]
+    },
+    "prediction_rule": "argmax of six output logits; no test-tuned rejection threshold",
+    "preprocessing": "saved training mean/std; never refit on test data",
+    "dataset_index_sha256": "675b6516f54d430d96cd9db3dcb0c2f76b2fae5643f6d23c54fa4e15eaca0785",
+    "dataset_config_sha256": "f434ac040581926328ea67f8bc670f40835ec35e08001e30519b7aeb054748a9"
+  },
+  "results": {
+    "plain_tcn": {
+      "seen_session_test": {
+        "accuracy": 0.9990963855421687,
+        "macro_f1": 0.9983096449233874,
+        "confusion_matrix": [
+          [
+            322,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            244,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            447,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            298,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1821,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            1,
+            185
+          ]
+        ],
+        "classes": [
+          "squats",
+          "pushups",
+          "lunges",
+          "bicep_curls",
+          "other_exercise",
+          "non_activity"
+        ],
+        "per_class": {
+          "squats": {
+            "precision": 0.9969040247678018,
+            "recall": 1.0,
+            "f1": 0.9984496124031007,
+            "support": 322
+          },
+          "pushups": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 244
+          },
+          "lunges": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 447
+          },
+          "bicep_curls": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 298
+          },
+          "other_exercise": {
+            "precision": 0.9994511525795828,
+            "recall": 0.9994511525795828,
+            "f1": 0.9994511525795828,
+            "support": 1822
+          },
+          "non_activity": {
+            "precision": 0.9946236559139785,
+            "recall": 0.9893048128342246,
+            "f1": 0.9919571045576406,
+            "support": 187
+          }
+        },
+        "windows": 3320,
+        "sessions": [
+          "w09",
+          "w10",
+          "w11"
+        ]
+      },
+      "unseen_subject_test": {
+        "accuracy": 0.9445141852874718,
+        "macro_f1": 0.9266972837796429,
+        "confusion_matrix": [
+          [
+            410,
+            0,
+            0,
+            0,
+            44,
+            0
+          ],
+          [
+            0,
+            217,
+            5,
+            3,
+            18,
+            0
+          ],
+          [
+            10,
+            0,
+            611,
+            23,
+            2,
+            23
+          ],
+          [
+            0,
+            0,
+            0,
+            333,
+            15,
+            12
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1903,
+            14
+          ],
+          [
+            1,
+            0,
+            12,
+            6,
+            33,
+            288
+          ]
+        ],
+        "classes": [
+          "squats",
+          "pushups",
+          "lunges",
+          "bicep_curls",
+          "other_exercise",
+          "non_activity"
+        ],
+        "per_class": {
+          "squats": {
+            "precision": 0.9738717339667459,
+            "recall": 0.9030837004405287,
+            "f1": 0.9371428571428573,
+            "support": 454
+          },
+          "pushups": {
+            "precision": 1.0,
+            "recall": 0.8930041152263375,
+            "f1": 0.9434782608695652,
+            "support": 243
+          },
+          "lunges": {
+            "precision": 0.9729299363057324,
+            "recall": 0.9133034379671151,
+            "f1": 0.9421742482652274,
+            "support": 669
+          },
+          "bicep_curls": {
+            "precision": 0.9123287671232877,
+            "recall": 0.925,
+            "f1": 0.9186206896551724,
+            "support": 360
+          },
+          "other_exercise": {
+            "precision": 0.9444168734491315,
+            "recall": 0.9926969222743871,
+            "f1": 0.9679552390640894,
+            "support": 1917
+          },
+          "non_activity": {
+            "precision": 0.8545994065281899,
+            "recall": 0.8470588235294118,
+            "f1": 0.8508124076809455,
+            "support": 340
+          }
+        },
+        "windows": 3983,
+        "sessions": [
+          "w00",
+          "w05",
+          "w12",
+          "w13",
+          "w20"
+        ]
+      }
+    },
+    "motionlite": {
+      "seen_session_test": {
+        "accuracy": 0.9978915662650603,
+        "macro_f1": 0.9955796338187164,
+        "confusion_matrix": [
+          [
+            322,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            244,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            447,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            298,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1821,
+            1
+          ],
+          [
+            2,
+            0,
+            2,
+            1,
+            1,
+            181
+          ]
+        ],
+        "classes": [
+          "squats",
+          "pushups",
+          "lunges",
+          "bicep_curls",
+          "other_exercise",
+          "non_activity"
+        ],
+        "per_class": {
+          "squats": {
+            "precision": 0.9938271604938271,
+            "recall": 1.0,
+            "f1": 0.9969040247678018,
+            "support": 322
+          },
+          "pushups": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 244
+          },
+          "lunges": {
+            "precision": 0.9955456570155902,
+            "recall": 1.0,
+            "f1": 0.9977678571428571,
+            "support": 447
+          },
+          "bicep_curls": {
+            "precision": 0.9966555183946488,
+            "recall": 1.0,
+            "f1": 0.998324958123953,
+            "support": 298
+          },
+          "other_exercise": {
+            "precision": 0.9994511525795828,
+            "recall": 0.9994511525795828,
+            "f1": 0.9994511525795828,
+            "support": 1822
+          },
+          "non_activity": {
+            "precision": 0.9945054945054945,
+            "recall": 0.9679144385026738,
+            "f1": 0.9810298102981031,
+            "support": 187
+          }
+        },
+        "windows": 3320,
+        "sessions": [
+          "w09",
+          "w10",
+          "w11"
+        ]
+      },
+      "unseen_subject_test": {
+        "accuracy": 0.8985689179010796,
+        "macro_f1": 0.8426110909494144,
+        "confusion_matrix": [
+          [
+            431,
+            0,
+            0,
+            0,
+            23,
+            0
+          ],
+          [
+            0,
+            147,
+            0,
+            96,
+            0,
+            0
+          ],
+          [
+            34,
+            0,
+            503,
+            32,
+            0,
+            100
+          ],
+          [
+            0,
+            0,
+            0,
+            320,
+            16,
+            24
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            1865,
+            49
+          ],
+          [
+            6,
+            0,
+            1,
+            8,
+            12,
+            313
+          ]
+        ],
+        "classes": [
+          "squats",
+          "pushups",
+          "lunges",
+          "bicep_curls",
+          "other_exercise",
+          "non_activity"
+        ],
+        "per_class": {
+          "squats": {
+            "precision": 0.9092827004219409,
+            "recall": 0.9493392070484582,
+            "f1": 0.9288793103448276,
+            "support": 454
+          },
+          "pushups": {
+            "precision": 1.0,
+            "recall": 0.6049382716049383,
+            "f1": 0.7538461538461538,
+            "support": 243
+          },
+          "lunges": {
+            "precision": 0.998015873015873,
+            "recall": 0.7518684603886397,
+            "f1": 0.8576300085251493,
+            "support": 669
+          },
+          "bicep_curls": {
+            "precision": 0.7017543859649122,
+            "recall": 0.8888888888888888,
+            "f1": 0.7843137254901961,
+            "support": 360
+          },
+          "other_exercise": {
+            "precision": 0.9733820459290188,
+            "recall": 0.9728742827334377,
+            "f1": 0.9731280980954866,
+            "support": 1917
+          },
+          "non_activity": {
+            "precision": 0.6440329218106996,
+            "recall": 0.9205882352941176,
+            "f1": 0.7578692493946732,
+            "support": 340
+          }
+        },
+        "windows": 3983,
+        "sessions": [
+          "w00",
+          "w05",
+          "w12",
+          "w13",
+          "w20"
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "plain_tcn": 15894,
+    "motionlite": 11656
+  },
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "device": "cuda",
+    "gpu": "Tesla T4"
+  },
+  "training_performed": false,
+  "normalization_refitted": false,
+  "test_threshold_tuning": false,
+  "limits": "One seed and correlated overlapping windows. Background labels are sparse spot-checks; frame-origin and viewpoint limitations remain. Split names follow the existing MM-Fit protocol; workout count is not subject count. These results are window classification, not repetition-count accuracy, calibrated uncertainty or proof of population performance."
+}

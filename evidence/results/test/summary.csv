@@ -1,0 +1,5 @@
+model,split,windows,accuracy,macro_f1
+plain_tcn,seen_session_test,3320,0.9990963855421687,0.9983096449233874
+plain_tcn,unseen_subject_test,3983,0.9445141852874718,0.9266972837796429
+motionlite,seen_session_test,3320,0.9978915662650603,0.9955796338187164
+motionlite,unseen_subject_test,3983,0.8985689179010796,0.8426110909494144

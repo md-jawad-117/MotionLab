@@ -1,0 +1,27 @@
+# Local runtimes and generated Python files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Credentials and machine-local settings
+.env
+.env.*
+!.env.example
+# Dataset, caches and generated analysis
+data/
+video/
+runs/
+demo/
+*.npz
+*.npy
+*.task
+*.download
+# Large or duplicate media and archives
+*.mp4
+!assets/readme/demo-43s.mp4
+*.zip
+presentation/
+Open Demo.cmd
+.DS_Store
+Thumbs.db
